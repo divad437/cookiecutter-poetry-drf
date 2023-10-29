@@ -8,6 +8,10 @@ repos:
       - id: check-yaml
       - id: end-of-file-fixer
       - id: trailing-whitespace
+      - id: debug-statements
+      - id: check-builtin-literals
+      - id: check-json
+      - id: end-of-file-fixer
 
   - repo: https://github.com/charliermarsh/ruff-pre-commit
     rev: "v0.0.230"
@@ -23,3 +27,25 @@ repos:
     rev: "v3.0.3"
     hooks:
       - id: prettier
+
+  - repo: https://github.com/adamchainz/django-upgrade
+    rev: "1.13.0"
+    hooks:
+      - id: django-upgrade
+        args: ["--target-version", "4.1"]
+
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.4.0
+    hooks:
+      - id: pyupgrade
+        args: [--py311-plus]
+
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort
+
+  - repo: https://github.com/PyCQA/flake8
+    rev: 6.0.0
+    hooks:
+      - id: flake8
