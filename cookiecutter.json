@@ -19,5 +19,8 @@
         "Apache Software License 2.0",
         "GNU General Public License v3",
         "Not open source"
-    ]
+    ],
+    "use_simplejwt": ["y", "n"],
+    "use_djoser_auth": ["y", "n"],
+    "login_field": ["email", "username"]
 }
